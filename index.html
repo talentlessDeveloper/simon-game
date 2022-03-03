@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./app.js" defer></script>
+    <title>Simon Game</title>
+  </head>
+  <body>
+    <header>
+    <audio id="clip1">
+        <source src="https://s3.amazonaws.com/freecodecamp/simonSound1.mp3">
+        </source>
+    </audio>
+    <audio id="clip2">
+        <source src="https://s3.amazonaws.com/freecodecamp/simonSound2.mp3">
+        </source>
+    </audio>
+    <audio id="clip3">
+        <source src="https://s3.amazonaws.com/freecodecamp/simonSound3.mp3">
+        </source>
+    </audio>
+    <audio id="clip4">
+        <source src="https://s3.amazonaws.com/freecodecamp/simonSound4.mp3">
+        </source>
+    </audio>
+    
+  </header>
+
+  <div class="circle">
+      <div class="top-left panel"></div>
+      <div class="top-right panel"></div>
+      <div class="bottom-right panel"></div>
+      <div class="bottom-left panel"></div>
+
+      <div class="inner-circle">
+          <h3 class="title">Simon</h3>
+          <div class="control">
+              <div class="power">
+                  <button class="power-btn">
+                  <i class="fas fa-power-off"></i>
+              </button>
+              <p>power</p>
+
+              </div>
+
+              <button class="start-btn">Start</button>
+              <div class="strict">
+                  <input type="checkbox" id="strict-btn" >
+                  <label for="strict-btn">Strict</label>
+              </div>
+          </div>
+          <div class="count">
+              <div class="count-box"></div>
+              <p class="count-text">Count</p>
+          </div>
+      </div>
+  </div>
+  <footer>
+      Coded by Kareem <span></span> <a href="https://github.com/talentlessDeveloper/simon-game" target="_blank">
+          <i class="fa-brands fa-github"></i>
+      </a>
+  </footer>
+  </body>
+</html>
