@@ -5,7 +5,7 @@
 }
 
 body {
-  background: url("https://media.istockphoto.com/photos/dice-background-picture-id1206781652?b=1&k=20&m=1206781652&s=170667a&w=0&h=TFy7wK2cAisC_5BoRqWqmpB6okvDvJ4nUPR8aZa0f2w=");
+  background: url("https://media.istockphoto.com/photos/seamless-high-detiled-very-light-handmade-paper-with-visible-picture-id481746542?b=1&k=20&m=481746542&s=170667a&w=0&h=EE1ZyIXcbOoUmawuf6xY24MxHIZ7cG_Pt5xrwAJKdoI=");
   background-repeat: no-repeat;
   background-size: cover;
   font-family: "Original Surfer", cursive;
@@ -38,9 +38,11 @@ body {
   height: 150px;
   border: 4px solid #000;
   position: absolute;
-
   cursor: pointer;
   z-index: -1;
+  touch-action: manipulation;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .top-left {
