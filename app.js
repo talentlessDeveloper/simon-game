@@ -13,6 +13,7 @@ let gameLength = 20;
 let gameOrder = [];
 let playerOrder = [];
 let powerOn = false;
+let startGame = false;
 let strict = false;
 let flash;
 let compTurn;
@@ -33,6 +34,7 @@ strictBtn.addEventListener("click", () => {
 powerBtn.addEventListener("click", () => {
   if (powerOn) {
     powerOn = false;
+    startGame = false;
     powerBtn.classList.remove("on");
     countBox.innerText = "";
   } else {
@@ -45,6 +47,7 @@ powerBtn.addEventListener("click", () => {
 startBtn.addEventListener("click", () => {
   if (powerOn) {
     play();
+    startGame = true;
   }
 });
 
@@ -93,7 +96,7 @@ function gameTurn() {
 
 // when user clicks on panel
 greenPanel.addEventListener("click", () => {
-  if (powerOn) {
+  if (powerOn && startGame) {
     playerOrder.push("green");
     green();
     check();
@@ -106,7 +109,7 @@ greenPanel.addEventListener("click", () => {
 });
 
 redPanel.addEventListener("click", () => {
-  if (powerOn) {
+  if (powerOn && startGame) {
     playerOrder.push("red");
     red();
     check();
@@ -118,7 +121,7 @@ redPanel.addEventListener("click", () => {
   }
 });
 yellowPanel.addEventListener("click", () => {
-  if (powerOn) {
+  if (powerOn && startGame) {
     playerOrder.push("yellow");
     yellow();
     check();
@@ -130,7 +133,7 @@ yellowPanel.addEventListener("click", () => {
   }
 });
 bluePanel.addEventListener("click", () => {
-  if (powerOn) {
+  if (powerOn && startGame) {
     playerOrder.push("blue");
     blue();
     check();
